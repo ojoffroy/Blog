@@ -1,0 +1,166 @@
+/* Mobile first */
+*{
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body{
+	margin: 0;
+	background: #112c38;
+	position: relative;
+}
+
+div#bloc1, div#bloc2{
+	height: 100px;
+	position: relative;	
+	text-align: center;
+}
+h1{
+    line-height: 100px;
+}
+p, h1, h2{
+	margin: 0;
+	color: #fff;
+}
+div#bloc1 img {
+  display:block;
+  width:100%;
+  height:100%;
+}
+div#bloc2 img {
+  display:block;
+  width:100%;
+  height:100%;
+}
+div#bloc1 a,div#bloc2 a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+div#demi1, div#demi2{
+	margin: 0 auto;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	transition: 1s;
+}
+div#demi1{
+	border-radius: 300px 300px 0 0;
+	position: absolute;
+	top:0;
+}
+div#demi2{
+	border-radius: 0 0 300px 300px;
+	position: absolute;
+	top:0;
+}
+div#demi1:hover{
+	opacity: .5;
+	
+}
+div#demi2:hover{
+	opacity: .1;	
+	
+}
+#conteneur{
+	display: flex;
+	justify-content: space-between;
+}
+aside.cote{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+aside.cote h2{
+	margin-bottom: 10px;
+}
+#conteneur p{
+	width: 100%;
+	margin: 0;
+	padding: 5px;
+	text-align: justify;
+}
+#bloc3{
+	width: 500px;
+	height: 500px;
+	margin: 0;
+	position: relative;
+}
+#bloc3 a{
+	display: block;
+	width: 40%;
+	height: 40%;
+	margin: 5%;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: .5s;
+}
+#bloc3 a img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.img1{
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+	z-index: 2;
+	text-align: center;
+}
+.img2{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: 4;
+	text-align: center;
+}
+.img3{
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+	z-index: 1;
+	text-align: center;
+}
+.img4{
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	z-index: 3;
+	text-align: center;
+}
+div#bloc3 a:hover{
+	z-index: 5;
+	box-shadow: 2px 2px 10px #99844F;
+}
+main h1{
+	margin: 0;
+	text-align: center;
+}
+footer{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+footer a{
+	color: #fff;
+}
+footer a:hover{
+	color: #99844F;
+}
+footer a:visited
+{
+    color: #aaa;
+}
+#conteneur{
+	flex-direction: column;
+	align-items: center;
+}
+@media (min-width:1024px){
+    #conteneur{
+        flex-direction: row;
+    }
+    aside.cote{
+        width: 30%;
+    }
+}

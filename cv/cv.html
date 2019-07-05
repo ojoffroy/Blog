@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Mon CV en ligne</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Fancy Box -->
+	<link rel="stylesheet" href="dist/jquery.fancybox.min.css" />
+	<!-- Fancy Box -->
+
+	<!-- ScrollReveal -->
+	<script src="dist/scrollreveal.js"></script>
+	<!-- ScrollReveal -->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133280110-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-133280110-2');
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+</head>
+
+<body>
+	<div id="bloc_page">
+		<div id="liseret"></div>
+		<div id="bloc">
+			<header>
+				<div id="presentation">
+					<h1><strong>Olivier Joffroy</strong></h1>
+					<p><strong>Développeur Intégrateur WEB</strong><br />(Suite à un bilan de compétences réalisé au
+						sein de la société <a href="https://www.terredenvol.fr/" target="_blank">Terre d'enVol</a>.)</p>
+					<p><strong>Mon CV en PDF : </strong><a href="pdf/CV Olivier Joffroy (T).pdf" data-fancybox>Cliquez
+							ici</a>.</p>
+				</div>
+				<a id="photo" href="img/Moi.jpg" data-fancybox><img src="img/Moi_mini.jpg" alt="Olivier Joffroy"
+						title="Cliquez pour agrandir" /></a>
+			</header>
+			<section>
+				<div class="competences headline1 load-hidden">
+					<h2>Mes compétences</h2>
+					<ul>
+						<li><strong>Gestion et management d'un projet web</strong></li>
+						<li><strong>Développement d'un site web statique</strong></li>
+						<li><strong>Développement d'un site web dynamique</strong></li>
+						<li><strong>Outils CMS</strong></li><br>
+						<li>Gestion d'incidents logiciels, matériel et réseau</li>
+						<li>Lancement de serveurs spécifiques à Hipponet et Gnet</li>
+						<li>Gestion du matériel photo à l'arrivée</li>
+						<li>Travail en collaboration avec les différents acteurs de l'arrivée des courses hippiques et
+							les fournisseurs</li>
+						<li>Rigueur et persévérance</li>
+					</ul>
+				</div>
+				<div class="experience headline2 load-hidden">
+					<h2>Mon expérience</h2>
+					<ul>
+						<li><strong>Mars 2019 à juin 2019 : Web developer stagiaire chez <a
+							href="https://www.keolio.com/"
+							target="_blank">KEOLIO</a> Agence de communication digitale.</strong></li>
+						<li><strong>Nov. 2017 à nov. 2018 : Technicien téléassistance informatique et réseau au Pôle
+								Multimédia Hipponet.</strong></li>
+						<li><strong>Janv. 2005 à oct. 2017 : Responsable matériel photo à l’arrivée</strong> (Agent de
+							Maîtrise) au Service Balances.</li>
+						<li><strong>Janv. 1999 à déc. 2004 :</strong> Employé polyvalent au Service Balances.</li>
+						<li><strong>Janv. 1994 à déc. 1998 :</strong> Vacataire (missions variées : services Parking,
+							Accueil, Secrétariat et Vétérinaire).</li>
+					</ul>
+				</div>
+				<div class="formation headline3 load-hidden">
+					<h2>Ma formation</h2>
+					<ul>
+						<li><strong>Nov. 2018 à juin 2019 : Formation de niveau II de Développeur Intégrateur web</strong>
+							chez <a
+								href="https://www.ifocop.fr/formations-metiers/web-digital/formation-developpeur-integrateur-web/"
+								target="_blank">IFOCOP</a>-Paris 11ème</li>
+						<li><strong>Janv. 2019 : </strong><a
+								href="https://openclassrooms.com/fr/courses/2342361-gerez-votre-code-avec-git-et-github"
+								target="_blank">Gérez votre code avec Git et GitHub</a> sur <a
+								href="https://openclassrooms.com" target="_blank">OpenClassrooms</a></li>
+						<li><strong>Déc. 2018 : </strong><a
+								href="https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript"
+								target="_blank">Apprenez à coder avec JavaScript</a> sur <a
+								href="https://openclassrooms.com" target="_blank">OpenClassrooms</a></li>
+						<li><strong>Nov. 2018 : </strong><a
+								href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3"
+								target="_blank">Apprenez à créer votre site web avec HTML5 et CSS3</a> sur <a
+								href="https://openclassrooms.com" target="_blank">OpenClassrooms</a></li>
+						<li>Formation d'entreprise</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</div>
+	<footer>CV > <a href="../index.html">Accueil</a></footer>
+
+	<!-- Fancy Box -->
+	<script src="dist/jquery-3.3.1.min.js"></script>
+	<script src="dist/jquery.fancybox.min.js"></script>
+	<!-- Fancy Box -->
+
+	<!-- ScrollReveal -->
+	<script>
+		ScrollReveal().reveal('.headline1');
+		ScrollReveal().reveal('.headline2', { delay: 400 });
+		ScrollReveal().reveal('.headline3', { delay: 800 });
+	</script>
+	<!-- ScrollReveal -->
+
+</body>
+</html>

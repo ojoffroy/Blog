@@ -1,0 +1,139 @@
+@font-face{
+    font-family: 'ambleregular';
+    src: url('fonts/Amble-Regular-webfont.eot');
+    src: url('fonts/Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Amble-Regular-webfont.woff') format('woff'),
+         url('fonts/Amble-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Amble-Regular-webfont.svg#ambleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'ambleregular', Impact, "Arial Black", Arial, Verdana, sans-serif;
+	background: #112c38;
+	color: #fff;
+	position: relative;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+#presentation{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+header #photo{
+    display: block;
+}
+#bloc_page
+{
+    display: flex;
+}
+h1, p
+{
+    text-align: center;
+}
+h1 strong {
+    font-size: 1.5em;
+    width: 100%;
+}
+h2
+{
+    color: #fff;
+    background: #99844F;
+	/*border: 1px solid;*/
+	/*border-radius: 5px;*/
+	/*box-shadow: 1px 1px 6px;*/
+	text-align: center;
+}
+img{
+    /*border-radius: 10px;*/
+    box-shadow: 1px 1px 10px #99844F;
+}
+section
+{
+    display: flex;
+    justify-content: space-around;
+}
+strong
+{
+    font-weight: bold;
+}
+.experience, .competences, .formation
+{
+    width: 30%;
+}
+#liseret
+{
+    /*background-image: url('img/green.jpg');*/
+    background: #99844F;
+    width: 10%;
+    height: 600px;
+    /*border-radius: 10px 10px 10px 10px;*/
+}
+#bloc
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+a{
+	color: #fff;
+}
+a:hover{
+	color: #99844F;
+}
+a:visited
+{
+    color: #aaa;
+}
+footer{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+footer a{
+	color: #fff;
+}
+footer a:hover{
+	color: #99844F;
+}
+footer a:visited
+{
+    color: #aaa;
+}
+// ScrollReveal
+html.sr .load-hidden {
+    visibility: hidden;
+}
+@media all and (max-width: 1024px)
+{
+    #liseret
+    {
+        display: none;
+    }
+    section
+    {
+        flex-direction: column;
+        text-align: justify;
+        width: 100%;
+    }
+    .experience
+    {
+        width: 100%;
+
+    }
+    .competences
+    {
+        width: 100%;
+    }
+
+    .formation
+    {
+        width: 100%;
+    }
+}

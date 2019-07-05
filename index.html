@@ -1,41 +1,99 @@
 <!doctype html>
 <html lang="fr-FR">
-	<head>
-		<meta charset="utf-8">
-		<title>jo-dev.ovh | Développement web</title>
-		<meta name="description" content="jo-dev.ovh est un site vitrine de mon savoir faire en terme de développement web. Je vous propose mes services pour réaliser vos demandes. Ce site est toujours en évolution.">
-    <link rel="stylesheet" href="index.css" />
-		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico">
-		<link rel="canonical" href="http://jo-dev.ovh/index.html"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<meta property="og:image" content="http://jo-dev.ovh/jo-dev.png">
-		<meta property="og:description" content="jo-dev.ovh est un site vitrine de mon savoir faire en terme de développement web. Je vous propose mes services pour réaliser vos demandes. Ce site est toujours en évolution.">
-<meta property="og:title" content="jo-dev.ovh | Développement web">
-	</head>
-	<body>
-			<h1>jo-dev.ovh</h1>
-			<h2>Olivier Joffroy</h2><h3>Développeur intégrateur web</h3>
-			<div id="nav">
-			<ul>
-				<li><a href="site1/site1.html">Portfolio</a></li>
-				<li><a href="cv/cv.html">CV</a></li>
-				<li><a href="mailto:ojoffroy@gmail.com">contact</a></li>
-				<li><a href="mentions.html">Mentions</a></li>
-			</ul>
+
+<head>
+	<meta charset="utf-8">
+	<title>olivier-webdev.fr | Développement web | Olivier Joffroy</title>
+	<meta name="description" content="Ceci est un site vitrine de mon savoir faire en terme de développement web. Je vous propose mes services pour réaliser vos demandes. Ce site est en évolution.">
+	<meta name="author" content="Olivier Joffroy">
+	<link rel="stylesheet" href="index.css" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="canonical" href="https://olivier-webdev.fr/index.html" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="olivier-webdev.fr | Développement web | Olivier Joffroy">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://olivier-webdev.fr/">
+	<meta property="og:image" content="https://olivier-webdev.fr/olivier-webdev.png">
+	<meta property="og:description" content="Ceci est un site vitrine de mon savoir faire en terme de développement web. Je vous propose mes services pour réaliser vos demandes. Ce site est en évolution.">
+	<!-- Open Graph -->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133280110-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-133280110-2');
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+
+<body>
+	<h1>olivier-webdev.fr</h1>
+	<h2>Olivier Joffroy</h2>
+	<h3>Développeur intégrateur web</h3>
+	<div id="nav">
+		<ul>
+			<li><a href="/portfolio/portfolio.html">Portfolio</a></li>
+			<li><a href="cv/cv.html">CV</a></li>
+			<li><a href="mailto:ojoffroy@gmail.com">contact</a></li>
+			<li><a href="mentions.html">Mentions</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="circle">
+			
 		</div>
-		<div id="lien">
-			<ul>
-				<li>
-					<a href="https://www.linkedin.com/in/olivier-joffroy-b38200166/" target="_blank">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<i class="fa fa-linkedin" aria-hidden="true"></i>
-					</a>
-				</li>
-			</ul>
-		</div>		
-	</body>
+		<p>
+			olivier-webdev.fr est un site vitrine de mon savoir faire en terme de développement web. Je vous propose mes services pour
+			réaliser vos demandes. Ce site est toujours en évolution.<br>
+			Je suis développeur web full-stack junior. Je vous propose mes compétences pour apporter des solutions à vos
+			problèmes de développement et d'intégration. Je peux créer et gérer des sites en front-end ainsi qu'en back-end à
+			l'aide de ces différents langages : HTML, CSS - Boostrap, Javascript - Jquery, Ajax, SQL, PHP. Mon profil vous
+			intéresse, contactez moi.
+		</p>
+	</div>
+	<div id="lien">
+		<ul>
+			<li>
+				<a href="https://www.linkedin.com/in/olivier-joffroy/" target="_blank">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script src="js/pixi.min.js"></script>
+			<script>
+				window.onload = function () {
+		
+				let app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
+				document.body.appendChild(app.view);
+				let img = new PIXI.Sprite.from("moi.jpg");
+				img.width = window.innerWidth;
+				img.height = window.innerHeight;
+				app.stage.addChild(img);
+		
+				depthMap = new PIXI.Sprite.from("moi-map.jpg");
+				depthMap.width = window.innerWidth;
+				depthMap.height = window.innerHeight;
+				app.stage.addChild(depthMap);
+		
+				displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
+				app.stage.filters = [displacementFilter];
+				window.onmousemove = function(e) {
+				displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) /20;
+				displacementFilter.scale.y = (window.innerHeight / 2 - e.clientY) /20;
+				};
+		
+				}
+			</script>
+</body>
 </html>
