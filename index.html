@@ -30,6 +30,7 @@
 		gtag('config', 'UA-133280110-2');
 	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
+
 </head>
 
 <body>
@@ -46,7 +47,7 @@
 	</div>
 	<div class="container">
 		<div class="circle">
-			
+			<img src="Moi.jpg" alt="photo de moi">
 		</div>
 		<p>
 			olivier-webdev.fr est un site vitrine de mon savoir faire en terme de développement web. Je vous propose mes services pour
@@ -70,30 +71,6 @@
 			</li>
 		</ul>
 	</div>
-	<script src="js/pixi.min.js"></script>
-			<script>
-				window.onload = function () {
-		
-				let app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
-				document.body.appendChild(app.view);
-				let img = new PIXI.Sprite.from("moi.jpg");
-				img.width = window.innerWidth;
-				img.height = window.innerHeight;
-				app.stage.addChild(img);
-		
-				depthMap = new PIXI.Sprite.from("moi-map.jpg");
-				depthMap.width = window.innerWidth;
-				depthMap.height = window.innerHeight;
-				app.stage.addChild(depthMap);
-		
-				displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
-				app.stage.filters = [displacementFilter];
-				window.onmousemove = function(e) {
-				displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) /20;
-				displacementFilter.scale.y = (window.innerHeight / 2 - e.clientY) /20;
-				};
-		
-				}
-			</script>
 </body>
+
 </html>
